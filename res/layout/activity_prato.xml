@@ -1,0 +1,199 @@
+<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Menu Lateral -->
+
+    <ListView
+        android:id="@+id/left_pane"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#696969"
+        android:divider="@drawable/divider_xml"
+        android:dividerHeight="1dp" />
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dd0a0a"
+        tools:context=".RestauranteActivity" >
+
+        <RelativeLayout
+            android:id="@+id/cabecalho_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/prato_executivo_black" >
+
+            <ImageView
+                android:id="@+id/imageViewFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/borda_arredondada_perfil_restaurante"
+                android:src="@drawable/borda_arredondada_perfil_restaurante" />
+
+            <RelativeLayout
+                android:id="@+id/relativeTextTituloEndereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="23dp"
+                android:layout_toRightOf="@+id/imageViewFoto"
+                android:background="@drawable/borda_arrendondada_opaca" >
+
+                <TextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Large Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#FFFAFA"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarPrato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewNome"
+                    android:numStars="4"
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
+                <RatingBar
+                    android:id="@+id/ratingBarPratoPreenchida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewNome"
+                    android:numStars="4"
+                    android:rating="0.0"
+                    android:stepSize="0.5"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageViewJaComi"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/ratingBarPrato"
+                    android:layout_below="@+id/ratingBarPrato"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/btn_jacomi" />
+
+                <ImageView
+                    android:id="@+id/imageViewJaComiBranco"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/ratingBarPrato"
+                    android:layout_below="@+id/ratingBarPrato"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/btn_jacomi_selecionado"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageViewQueroComer"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@+id/imageViewJaComi"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/imageViewJaComi"
+                    android:src="@drawable/btn_querocomer" />
+
+                <ImageView
+                    android:id="@+id/imageViewQueroComerBranco"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@+id/imageViewJaComi"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/imageViewJaComi"
+                    android:src="@drawable/btn_querocomer_selecionado"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tituloDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cabecalho_perfil"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borda_arredondada" >
+
+            <TextView
+                android:id="@+id/textViewDados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:text="Descrição"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dadosRestaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloDados"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/borda_arredondada" >
+
+            <TextView
+                android:id="@+id/textViewDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="descricao" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/informacoesLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dadosRestaurante"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/borda_arredondada" >
+
+            <TextView
+                android:id="@+id/textViewInformacoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:text="Preço:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewInformacoes"
+                android:layout_alignBottom="@+id/textViewInformacoes"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:text="Preço"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.SlidingPaneLayout>

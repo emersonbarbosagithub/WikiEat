@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageViewFotoPrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_launcher"
+        android:background="@drawable/borda_arredondada_amarela" />
+
+    <TextView
+        android:id="@+id/textViewDescricaoPrato"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewFotoPrato"
+        android:layout_alignLeft="@+id/textViewNomePrato"
+        android:layout_marginBottom="15dp"
+        android:text="Vatapá, Caruru, camarão, teste ,teste ,teste"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	<RelativeLayout 
+	    android:id="@+id/layoutPreco"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewNomePrato"
+        
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/borda_arredondada_opaca_vermelha">
+	    
+	    <TextView
+        android:id="@+id/textViewPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:textColor="#fff"
+        android:text="R$ 10,00"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	</RelativeLayout>
+    
+    
+    
+
+    <TextView
+        android:id="@+id/textViewNomePrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewDescricaoPrato"
+        android:layout_marginLeft="14dp"
+        
+        android:layout_toRightOf="@+id/imageViewFotoPrato"
+        android:text="Acarajé"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageViewFotoPrato"
+        android:layout_marginTop="180dp"
+        android:text="Small Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

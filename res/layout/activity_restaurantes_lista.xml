@@ -1,0 +1,58 @@
+<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<!-- Menu Lateral -->
+
+
+  
+  <ListView  
+    android:id="@+id/left_pane"  
+    android:layout_width="300dp"  
+    android:layout_height="match_parent"  
+    android:layout_gravity="left"
+    android:divider="@drawable/divider_xml" 
+    android:dividerHeight="1dp"
+    android:background="#696969"/>
+        
+    
+
+<RelativeLayout 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityRestaurantesLista" >
+
+    <EditText
+        android:id="@+id/editTextPesquisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:layout_toLeftOf="@+id/imageViewPesquisar"
+        android:hint="Localizar restaurantes"
+        android:ems="10" />
+
+    <ImageView
+        android:id="@+id/imageViewPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextPesquisa"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editTextPesquisa"
+        android:src="@android:drawable/ic_search_category_default" />
+
+    <ListView
+        android:id="@+id/listViewRestaurantes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewPesquisar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" >
+    </ListView>
+
+</RelativeLayout>
+
+</android.support.v4.widget.SlidingPaneLayout>

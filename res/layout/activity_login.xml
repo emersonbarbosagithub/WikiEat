@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dd0a0a" >
+
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_login"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/button_login"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/logowikieatinicial" />
+
+    <ImageView
+        android:id="@+id/button_login"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/loginwithfacebook"
+        android:text="@string/login" />
+
+    <ImageView
+        android:id="@+id/imageViewEntrar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/button_login"
+        android:layout_below="@+id/textViewJaTemCadastro"
+        android:src="@drawable/btn_entrar" />
+
+    <TextView
+        android:id="@+id/textViewJaTemCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewEntrar"
+        android:layout_below="@+id/button_login"
+        android:text="Já é cadastrado?"
+        android:layout_marginBottom="2dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

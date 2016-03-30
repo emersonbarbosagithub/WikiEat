@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_timeline" >
+
+    <ImageView
+        android:id="@+id/imageViewUsuario"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/borda_arredondada_img"
+        android:src="@drawable/eu" />
+
+    <ImageView
+        android:id="@+id/imageViewComidaRestaurante"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignLeft="@+id/imageViewUsuario"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageViewUsuario"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shadow"
+        android:src="@drawable/comidaexemplo" />
+
+    <TextView
+        android:id="@+id/textViewOque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewUsuario"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewFez"
+        android:text="Boss Pizza"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewFez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewOque"
+        android:layout_alignBottom="@+id/textViewOque"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewQuem"
+        android:text="Fez"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewQuem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewFez"
+        android:layout_alignBottom="@+id/textViewFez"
+        android:layout_toRightOf="@+id/imageViewUsuario"
+        android:layout_marginLeft="5dp"
+        android:text="Fulano"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@+id/imageViewComidaRestaurante"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/imageViewComidaRestaurante"
+        android:src="@drawable/comments" />
+    
+
+</RelativeLayout>
